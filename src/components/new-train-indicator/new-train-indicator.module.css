@@ -1,0 +1,30 @@
+.nextTrainIndicator {
+  width: 400px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  background-color: #f8f8f8;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+.trainList {
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  height: 60px;
+}
+
+.slideIn {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.slideOut {
+  transform: translateX(-100%);
+  opacity: 0;
+}
+
+.virtualTime {
+  font-weight: bold;
+  margin-top: 10px;
+}
