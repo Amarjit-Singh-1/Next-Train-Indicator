@@ -9,7 +9,7 @@ interface TrainRowProps {
 
 const TrainRow: React.FC<TrainRowProps> = ({ train, currentVT }) => {
   return (
-    <div className={styles.trainRow}>
+    <div className={styles.trainRow} data-testid="train-row">
       <span>{train.destination}</span>
       <span>{train.arrivalTime - currentVT} min</span>
     </div>

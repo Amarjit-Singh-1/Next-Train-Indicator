@@ -1,17 +1,18 @@
 import { trainFrequencies } from "./constants";
 
 export interface Train {
+  id: string;
   destination: string;
-  arrivalTime: number; // In virtual minutes
+  arrivalTime: number;
 }
 
 export const getNextTrains = (currentVT: number): Train[] => {
   let upcomingTrains: Train[] = [];
 
-  trainFrequencies.forEach(({ destination, interval, startTime }) => {
+  trainFrequencies.forEach(({ id, destination, interval, startTime }) => {
     for (let time = startTime; time < 24 * 60; time += interval) {
       if (time >= currentVT) {
-        upcomingTrains.push({ destination, arrivalTime: time });
+        upcomingTrains.push({ id, destination, arrivalTime: time });
       }
     }
   });

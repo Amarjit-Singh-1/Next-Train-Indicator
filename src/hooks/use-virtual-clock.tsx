@@ -5,7 +5,6 @@ export const useVirtualClock = (initialTime: number) => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      //   setVirtualTime((prev) => prev + 1);
       setVirtualTime((prev) => (prev + 1) % (24 * 60));
     }, 1000);
 
